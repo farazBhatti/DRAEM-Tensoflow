@@ -9,7 +9,8 @@ from keras.layers.core.activation import Activation
 from keras.layers.normalization.batch_normalization_v1 import BatchNormalization
 from numpy.core.shape_base import block
 from keras.layers.convolutional.conv2d_transpose import Conv2D
-# from keras.layers.normalization import BatchNormalization
+
+
 def DiscriminativeSubNetwork(input_shape):
   # Initialize model
   base_channels = 64
