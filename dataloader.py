@@ -34,8 +34,8 @@ class MVTecDRAEMTestDataset():
         image = np.array(image).reshape((image.shape[0], image.shape[1], 3)).astype(np.float32)
         mask = np.array(mask).reshape((mask.shape[0], mask.shape[1], 1)).astype(np.float32)
 
-        image = np.transpose(image, (2, 0, 1))
-        mask = np.transpose(mask, (2, 0, 1))
+        # image = np.transpose(image, (2, 0, 1))
+        # mask = np.transpose(mask, (2, 0, 1))
         return image, mask
 
     def __getitem__(self, idx):
@@ -155,9 +155,9 @@ class MVTecDRAEMTrainDataset():
 
         image = np.array(image).reshape((image.shape[0], image.shape[1], image.shape[2])).astype(np.float32) / 255.0
         augmented_image, anomaly_mask, has_anomaly = self.augment_image(image, anomaly_source_path)
-        augmented_image = np.transpose(augmented_image, (2, 0, 1))
-        image = np.transpose(image, (2, 0, 1))
-        anomaly_mask = np.transpose(anomaly_mask, (2, 0, 1))
+        # augmented_image = np.transpose(augmented_image, (2, 0, 1))
+        # image = np.transpose(image, (2, 0, 1))
+        # anomaly_mask = np.transpose(anomaly_mask, (2, 0, 1))
         return image, augmented_image, anomaly_mask, has_anomaly
 
     def __getitem__(self, idx):
