@@ -5,6 +5,9 @@ such as defects or damage, using a combination of reconstruction and classificat
 ## Anomaly Detection Process
 ![](https://github.com/farazBhatti/DRAEM-Tensoflow/blob/main/images/result.png)
 
-#Datasets
+# Datasets
 To train on the MVtec Anomaly Detection dataset download the data and extract it. The Describable Textures dataset was used as the anomaly source image set in most of the experiments in the paper. You can run the download_dataset.sh script from the project directory to download the MVTec and the DTD datasets to the datasets folder in the project directory:
-> ./scripts/download_dataset.sh
+'''
+./scripts/download_dataset.sh
+
+'''
