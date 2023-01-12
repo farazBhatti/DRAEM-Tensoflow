@@ -57,7 +57,7 @@ python Train_model_1.py --object_name 'bottle' --lr 0.0001  --epochs 700 --load_
  Example:
  
   ```
-!python test.py --data_path ./datasets/mvtec/  --object_name 'bottle'  --checkpoint_path ./checkpoints/
+!python Test.py --data_path ./datasets/mvtec/  --object_name 'bottle'  --checkpoint_path ./checkpoints/
  ```
  
  # Results
