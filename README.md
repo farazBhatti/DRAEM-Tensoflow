@@ -41,6 +41,7 @@ python Train_model_1.py --object_name 'bottle' --lr 0.0001  --epochs 700 --load_
  
  # Results
  Both Models were Trained For 100 epochs and only a few Images.
+ 
  ![](https://github.com/hamzakhalil798/DRAEM-Tensoflow/blob/main/images/result_1.PNG)
  ![](https://github.com/hamzakhalil798/DRAEM-Tensoflow/blob/main/images/result_2.PNG)
  
