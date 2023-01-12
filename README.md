@@ -36,7 +36,7 @@ python Train_model_1.py --object_name 'bottle' --lr 0.0001  --epochs 700 --load_
 ```
  After 50 epochs the Model is saved in checkpoints_path.
  
- After Reconstructive Model is Trained Next step is to Train Discriminative Model the Discriminative Model automatically laods the latest trained Reconstructive Model from checkpoints_path and loads it.
+ After Reconstructive Model is Trained Next step is to Train Discriminative Model. The Discriminative Model automatically laods the latest trained Reconstructive Model from checkpoints_path and loads it.
  (--load_epoch) Provide if Discriminative Model was previously Trained and Training needs to be continued. Default is 0 , Training Starts from zero.
  Example :
  
