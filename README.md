@@ -41,7 +41,7 @@ python Train_model_1.py --object_name 'bottle' --lr 0.0001  --epochs 700 --load_
  Example :
  
  ```
- !python model_2.py --data_path ./datasets/mvtec/ --object_namem 'bottle' --anomaly_source_path ./datasets/dtd/images/  --checkpoint_path ./checkpoints/ --load_epoch 100
+ !python Train_model_2.py --data_path ./datasets/mvtec/ --object_namem 'bottle' --anomaly_source_path ./datasets/dtd/images/  --checkpoint_path ./checkpoints/ --load_epoch 100
  ```
  
  # PreTrained Models
