@@ -1,4 +1,17 @@
 # DRAEM-Tensorflow
+Tensorflow Implementation of [DRAEM](https://openaccess.thecvf.com/content/ICCV2021/papers/Zavrtanik_DRAEM_-_A_Discriminatively_Trained_Reconstruction_Embedding_for_Surface_Anomaly_ICCV_2021_paper.pdf) - ICCV2021:
+
+```
+@InProceedings{Zavrtanik_2021_ICCV,
+    author    = {Zavrtanik, Vitjan and Kristan, Matej and Skocaj, Danijel},
+    title     = {DRAEM - A Discriminatively Trained Reconstruction Embedding for Surface Anomaly Detection},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2021},
+    pages     = {8330-8339}
+}
+```
+
 A discriminatively trained reconstruction embedding for surface anomaly detection.
 This is tensorflow implementation of [DRAEM](https://arxiv.org/pdf/2108.07610v2.pdf).DRÆM (Discriminatively Trained Reconstruction Embedding for Surface Anomaly Detection) is a method for detecting anomalies in surfaces, 
 such as defects or damage, using a combination of reconstruction and classification techniques.
