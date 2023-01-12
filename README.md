@@ -15,9 +15,32 @@ To train on the MVtec Anomaly Detection dataset download the data and extract it
 # Training
 DRAEM has two Models. A reconstructive Model that reconstructs the Augmented Image and A Discriminative Model that predicts the Anomaly Mask.
 First Train the Reconstructed Modedel by :
-Pass the folder containing the training dataset to the Train_model_1.py script as the --data_path argument and the folder locating the anomaly source images as the --anomaly_source_path argument. The training script also requires learning rate (--lr), epochs (--epochs), path to store checkpoints (--checkpoint_path) and (--object_name)
+Pass the folder containing the training dataset to the Train_model_1.py script as the --data_path argument and the folder locating the anomaly source images as the --anomaly_source_path argument. The training script also requires learning rate (--lr), epochs (--epochs), path to store checkpoints (--checkpoint_path) and (--object_name) (--load_epoch)  Provide if Reconstructive Model was previously Trained and Training needs to be continued. Default is 0 , Training Starts from zero.
 . Example:
-```
-python Train_model_1.py --object_name 'bottle' --lr 0.0001  --epochs 700 --data_path ./datasets/mvtec/ --anomaly_source_path ./datasets/dtd/images/ --checkpoint_path ./checkpoints/ 
 
 ```
+python Train_model_1.py --object_name 'bottle' --lr 0.0001  --epochs 700 --load_epoch 100 --data_path ./datasets/mvtec/ --anomaly_source_path ./datasets/dtd/images/ --checkpoint_path ./checkpoints/ 
+```
+ After 50 epochs the Model is saved in checkpoints_path.
+ 
+ After Reconstructive Model is Trained Next step is to Train Discriminative Model the Discriminative Model automatically laods the latest trained Reconstructive Model from checkpoints_path and loads it.
+ (--load_epoch) Provide if Discriminative Model was previously Trained and Training needs to be continued. Default is 0 , Training Starts from zero.
+ Example :
+ 
+ ```
+ !python model_2.py --data_path ./datasets/mvtec/ --object_namem 'bottle' --anomaly_source_path ./datasets/dtd/images/  --checkpoint_path ./checkpoints/ --load_epoch 100
+ ```
+ 
+ # Inference 
+ To test the Trained Models use the following script. The script automatically Loads the Latest(highest epochs) Models from checkpoint_path and Displays Images and their respective Predicted Heatmaps.
+ Example:
+ 
+  ```
+!python test.py --data_path ./datasets/mvtec/  --object_name 'bottle'  --checkpoint_path ./checkpoints/
+ ```
+ 
+ # Results
+ Both Models were Trained For 100 epochs and only a few Images.
+ ![](https://github.com/hamzakhalil798/DRAEM-Tensoflow/blob/main/images/result_1.PNG)
+ ![](https://github.com/hamzakhalil798/DRAEM-Tensoflow/blob/main/images/result_2.PNG)
+ 
